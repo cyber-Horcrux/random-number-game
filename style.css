@@ -1,0 +1,84 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3f4f6;
+}
+
+.card {
+    background: white;
+    padding: 32px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    max-width: 380px;
+    width: calc(100% - 32px);
+}
+
+#title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 24px;
+}
+
+#instructions {
+    display: block;
+    font-size: 18px;
+    color: #0f0c0c;
+    margin-bottom: 16px;
+}
+
+#userInput {
+    color: #333;
+    font-size: 18px;
+    padding: 5px;
+    width: 100px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#userInput:disabled { background: #eee; }
+
+.buttons {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+#checkBtn { background-color: #4CAF50; }
+#checkBtn:hover:not(:disabled) { background-color: #41af46; }
+#checkBtn:active:not(:disabled) { background-color: #3e8e41; transform: translateY(2px); }
+
+#resetBtn { background-color: #f44336; }
+#resetBtn:hover { background-color: #da190b; }
+#resetBtn:active { background-color: #b71c1c; transform: translateY(2px); }
+
+#result {
+    font-size: 20px;
+    font-weight: bold;
+    min-height: 28px;
+    margin: 0 0 8px;
+}
+#result.win  { color: #2e7d32; }
+#result.lose { color: #c62828; }
+#result.warn { color: #ef6c00; }
+
+#attempts { color: #666; margin: 0; }
